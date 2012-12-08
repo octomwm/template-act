@@ -1,0 +1,574 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+  <head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<!-- Document Metadata -->
+		<meta http-equiv="Content-Language" content="en">
+		<!-- OpenId -->  <!-- Atom news feed -->
+		<link rel="alternate" type="application/atom+xml" title="Moving to Moose Hackathon 2012" href="http://act.yapc.eu/mtmh2012/atom/en.xml"><title>Search for users</title>
+		<!-- CSS Stylesheets -->
+    <style>
+@charset "utf-8";
+/* CSS Document */
+
+/* Reset CSS by : http://meyerweb.com/eric/tools/css/reset/ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Style begins*/
+
+/*General*/
+html{
+	width:100%;
+	height: 100%;
+	}
+
+body{
+	height: 100%;
+	font-family: sans-serif;
+	color:#444444;
+	font-size: 16px;
+	line-height: 1.5em;
+	}
+
+p, h1, h2, h3, h4, h5, h6, ul, blockquote {
+	margin-bottom: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6{
+	color: #333333;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+h2 {
+    font-size: 1.325em;
+}
+h3 {
+    font-size: 1.25em;
+}
+h4 {
+    font-size: 1.125em;
+}
+h5, h6 {
+    font-size: 1em;
+}
+
+a{
+	color: #1168CC
+}
+
+b{
+	font-weight: bold;
+}
+
+/* Header Style */
+#logo{
+	margin-top:47px;
+	color:white;
+	font-size: 4em
+}
+
+#user{
+	display:block;
+	margin-top:45px;
+	color:white;
+}
+
+#header a, #menu a, #menu h2, #menu{
+	color:white;
+	text-decoration: none;
+}
+#header{
+	width : 100%;
+	height : 100px;
+	background-color: #d90c00;
+}
+
+#headerbox{
+	width : 690px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#logo{
+	float:left;
+}
+
+#user{
+	float:right;
+}
+#menu{
+	width:100%;
+	height : 30px;
+	padding-bottom: 10px;
+	background-color : #d90c00;
+	transition-duration:0.4s;
+	display : block;
+}
+
+#menu img{
+	width:49px;
+	height: 30px;
+	margin-left: 49%;
+	transition-duration:0.4s;
+}
+#menu:hover img{
+	transform:rotate(180deg);
+	transition-duration:0.4s;
+	transition-delay:0.4s;
+}
+
+#menu:hover{
+	width:100%;
+	height: 275px;
+	transition-duration:0.4s;
+	transition-delay:0.4s;
+}
+#menu #dropdown{
+	display : none;
+	min-width:690px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#menu:hover #dropdown{
+	display : table;
+	padding-top: 10px;
+}
+
+#menu #dropdown div {
+	display:block;
+	float:left;
+	padding-right: 3em;
+	padding-bottom: 3em;
+}
+
+#menu #dropdown div:last-child {
+	padding-right: 0em;
+}
+
+/*Content*/
+
+#wrapper {
+	width:100%;
+	margin-top: 1em;
+}
+#content{
+	width:690px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/*Search form*/
+
+fieldset#searchform{
+	height: 200px;
+	display:block;
+}
+
+#searchform table{
+	float:left;
+	width : 490px;
+	background-color: #eeeeee;
+	display : block;
+	padding: 30px;
+}
+#searchform table input{
+	border:1px solid #cccccc;
+}
+
+#searchform table select{
+	width:275px;
+}
+
+#searchform table td {
+	padding-bottom: 5px;
+	padding-right: 10px;
+	}
+
+input#searchbutton{
+	float:right;
+	width:200px;
+	background-color: #bbbbbb;
+	border: none;
+	height:182px;
+	font-size: 1.5em;
+	color:white;
+}
+
+input#searchbutton:hover{
+	background-color: #777777;
+	transition-duration:0.4s;
+}
+
+p#info{
+	background-color: #fafae0;
+	border:1px solid #f6f6b8;
+	box-shadow: 0px 2px 0 #ffffff,0px 3px 0 #f6f6b8;
+	padding: 10px;
+	color:#837d47;
+}
+
+
+/*Search results*/
+
+table#user-list tr {
+	border: 1px solid #cccccc
+}
+
+table#user-list th {
+	text-align: left;
+	padding-left:10px;
+}
+
+table#user-list td {
+	padding:0 10px;
+	border-right:1px solid #cccccc;
+}
+table#user-list tr:first-child {
+	border: 1px solid #cccccc;
+	background-image:linear-gradient(#ffffff,#eeeeee);
+
+}
+
+input#nav {
+	width:100%;
+	padding:10px 10px;
+	border:none;
+	background-color: #bbbbbb;
+	color:white;
+	font-size: 1.5em;
+}
+input#nav:hover {
+	transition-duration:0.4s;
+	background-color: #555555;
+}
+
+table#user-list tbody tr td img {
+	float:right;
+}
+
+
+/*Footer*/
+
+#footer{
+	width:100%;
+	background-color: #348017;
+	color:white;
+	margin-top:1em;
+}
+#footer-content{
+	width:690px;
+	color:white;
+	padding: 20px;
+	margin:auto;
+}
+#footer-content a{
+	color:white;
+	text-decoration: underline;
+}
+
+@media screen and (max-width:768px){
+
+
+
+#menu {
+	height: 100%;
+	width:150px;
+}
+
+#menu #dropdown, #menu #dropdown:hover{
+	display : block;
+	padding-top: 0px;
+	width:150px;
+	min-width: 150px;
+	height: 100%;
+	background-color: #d90c00;
+}
+
+#menu img{
+	display:none;
+}
+#menu #dropdown div{
+	float:none;
+}
+
+#content {
+	max-width:618px;
+}
+
+
+}
+
+@media screen and (max-width:690px){
+
+}
+
+@media screen and (max-width:480px){
+
+}
+    </style>
+
+		<!-- Favorite icon -->
+		<link rel="shortcut icon" type="image/png" href="http://act.yapc.eu/favicon.png">
+	</head>
+
+	<body>
+		<div id="header">
+			<div id="headerbox">
+				<div id="logo">
+				<!-- Put your logo here-->
+					act
+				</div>
+				<!-- user menu -->
+				<div id="user">
+					<a href="http://act.yapc.eu/mtmh2012/user/9063">mwm</a> | <a href="http://act.yapc.eu/mtmh2012/logout">Logout</a> | <a href="http://act.yapc.eu/mtmh2012/main">Edit profile</a>
+				</div>
+			</div>
+		</div>
+
+		<div id="menu">
+			<img src="assets/drop.png"/>
+			<div id="dropdown">
+				<div id="home">
+					<h2>
+						<a href="http://act.yapc.eu/mtmh2012/index.html">Home</a>
+					</h2>
+					<ul>
+						<li>
+							<a href="http://act.yapc.eu/mtmh2012/schedule" title="Schedule">Schedule</a>
+						</li>
+						<li>
+							<a href="http://act.yapc.eu/mtmh2012/location.html" title="Location"> Location </a>
+						</li>
+						<li>
+							<a href="http://act.yapc.eu/mtmh2012/transportation.html" title="Getting there"> Getting there </a>
+						</li>
+						<li>
+							<a href="http://act.yapc.eu/mtmh2012/prices.html" title="Participation"> Participation </a>
+						</li>
+						<li>
+							<a href="http://act.yapc.eu/mtmh2012/contact.html" title="Contact"> Contact </a>
+						</li>
+						<li>
+							<a href="http://act.yapc.eu/mtmh2012/sponsors.html" title="Sponsors"> Sponsors </a>
+						</li>
+						<li>
+							<a href="http://act.yapc.eu/mtmh2012/map.html" title="Map"> Map </a>
+						</li>
+					</ul>
+				</div>
+
+				<!-- users menu -->
+				<div id="users">
+					<h2> Users </h2>
+					<ul> <li> <a href="http://act.yapc.eu/mtmh2012/search"> Search </a> </li> <li> <a href="http://act.yapc.eu/mtmh2012/stats"> Statistics </a> </li> </ul> <h2> <a href="http://act.yapc.eu/mtmh2012/news">News</a> </h2> <h2> <a href="http://act.yapc.eu/mtmh2012/wiki">Wiki</a> </h2>
+				</div>
+				 <!-- talks menu -->
+				<div id="talks">
+					<h2> <a href="http://act.yapc.eu/mtmh2012/talks"> Presentations </a> </h2> <ul> <li> <a href="http://act.yapc.eu/mtmh2012/favtalks"> Favorite Talks </a> </li> </ul> <li> <a href="http://act.yapc.eu/mtmh2012/schedule"> Schedule </a> </li> <li> <a href="http://act.yapc.eu/mtmh2012/timetable.ics"> iCal export </a> </li> <li> <a href="http://act.yapc.eu/mtmh2012/newtalk"> Submit a talk proposal </a> </li>
+				</div>
+				<!-- money menu -->
+
+				<!-- admin menu -->
+				<div id="admin">
+
+					<h2> <a href="http://act.mongueurs.net/conferences.html">Other conferences</a> </h2> <ul> <li><a href="http://act.yapc.eu/qh2012eu/">Quack and Hack 2012 Europe</a></li> <li><a href="http://www.perloasis.info/opw2013/">The Perl Oasis</a></li> <li><a href="http://act.perl.org.il/ilpw2013/">Perl Workshop in Israel, 2013</a></li> <li><a href="http://act.yapc.eu/gpw2013/">German Perl Workshop 15.0</a></li> </ul>
+				</div>
+			</div>
+		</div>
+
+		<div id="wrapper">
+
+			  <div id="content">
+				  	<form method="POST" action="/mtmh2012/search" id="user-search">
+					<h2>Moving to Moose: 25th August - 30th August</h2>
+					<h1>Search for users</h1>
+
+					<fieldset id="searchform">
+						<table>
+							<tbody>
+								<tr>
+									<td><label for="user-name">Name</label></td>
+									<td>
+										<input name="name" id="user-name" size="25" maxlength="60" type="text">
+									</td>
+								</tr>
+								<tr>
+									<td><label for="user-town">City</label></td>
+									<td>
+										<input name="town" id="user-town" size="25" maxlength="60" type="text">
+									</td>
+								</tr>
+								<tr>
+									<td><label for="user-country">Country</label></td>
+									<td>
+										<select name="country" id="user-country">
+											<option value="" selected="selected">Any</option>  <option value="be">Belgium</option>  <option value="fr">France</option>  <option value="de">Germany</option>  <option value="il">Israel</option>  <option value="nl">Netherlands</option>  <option value="no">Norway</option>  <option value="se">Sweden</option>  <option value="gb">United Kingdom</option>  <option value="us">United States</option>  </select>
+									</td>
+								</tr>
+								<tr>
+									<td><label for="user-group">Monger group</label></td>
+									<td>
+										<select name="pm_group" id="user-group">
+											<option value="" selected="selected">Any</option>  <option value="Amsterdam.pm">Amsterdam.pm</option>  <option value="Berlin.pm">Berlin.pm</option>  <option value="Bratislava.pm">Bratislava.pm</option>  <option value="Dahut.pm">Dahut.pm</option>  <option value="DFW.pm">DFW.pm</option>  <option value="Dresden.pm">Dresden.pm</option>  <option value="Frankfurt.pm">Frankfurt.pm</option>  <option value="Houston.pm">Houston.pm</option>  <option value="Israel.pm">Israel.pm</option>  <option value="Milton Keynes.pm">Milton Keynes.pm</option>  <option value="NY.pm">NY.pm</option>  <option value="Orlando.pm">Orlando.pm</option>  <option value="Oslo.pm">Oslo.pm</option>  <option value="Sophia.pm">Sophia.pm</option>  <option value="Tsukuba.pm">Tsukuba.pm</option>  <option value="Vienna.pm">Vienna.pm</option>  <option value="Vlaanderen.pm">Vlaanderen.pm</option>  </select>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<input id="searchbutton" name="search" value="Search" type="submit">
+					</fieldset>
+
+<!-- Search results -->
+
+					<p id="info">Committed users are listed in <b>bold</b> font (they have
+				bought their ticket, or will give a talk).</p>
+
+					<table id="user-list">
+					<tbody><tr>
+					 <th>Name</th>
+					 <th>City</th>
+					 <th>Country</th>
+					 <th>Monger group</th>  </tr>  <tr>
+					<td> <a href="http://act.yapc.eu/mtmh2012/user/15">Sébastien Aperghis-Tramoni (‎Maddingue‎)</a>  <img src="assets/photo.png" alt="photo" title="photo" height="12" width="12">  </td>
+					<td> Antibes </td>
+					<td> France </td>
+					<td> <a href="http://sophia.pm.org/">Sophia.pm</a>  </td>  </tr>  <tr>
+					<td> <strong><a href="http://act.yapc.eu/mtmh2012/user/244">Salve J. Nilsen (‎sjn‎)</a></strong>  <img src="assets/photo.png" alt="photo" title="photo" height="12" width="12">  </td>
+					<td> Oslo </td>
+					<td> Norway </td>
+					<td> <a href="http://oslo.pm.org/">Oslo.pm</a>  </td>  </tr>  <tr>
+					<td> <strong><a href="http://act.yapc.eu/mtmh2012/user/466">Marcus Ramberg (‎marcus‎)</a></strong>  <img src="assets/photo.png" alt="photo" title="photo" height="12" width="12">  </td>
+					<td> Oslo </td>
+					<td> Norway </td>
+					<td> <a href="http://oslo.pm.org/">Oslo.pm</a>  </td>  </tr>  <tr>
+					<td> <strong><a href="http://act.yapc.eu/mtmh2012/user/513">Karl Rune Nilsen (‎krunen‎)</a></strong>  </td>
+					<td> Oslo </td>
+					<td> Norway </td>
+					<td> <a href="http://oslo.pm.org/">Oslo.pm</a>  </td>  </tr>  <tr>
+					<td> <strong><a href="http://act.yapc.eu/mtmh2012/user/801">Arne Sommer (‎Arne‎)</a></strong>  <img src="assets/photo.png" alt="photo" title="photo" height="12" width="12">  </td>
+					<td> Oslo </td>
+					<td> Norway </td>
+					<td> <a href="http://oslo.pm.org/">Oslo.pm</a>  </td>  </tr>  <tr>
+					<td> <strong><a href="http://act.yapc.eu/mtmh2012/user/896">Gregory Williams (‎kasei‎)</a></strong>  </td>
+					<td> Troy </td>
+					<td> United States </td>
+					<td> &nbsp;  </td>  </tr>  <tr>
+					<td> <strong><a href="http://act.yapc.eu/mtmh2012/user/983">Chris Prather (‎perigrin‎)</a></strong>  <img src="assets/photo.png" alt="photo" title="photo" height="12" width="12">  </td>
+					<td> Orlando </td>
+					<td> United States </td>
+					<td> <a href="http://dahut.pm.org/">Dahut.pm, Orlando.pm</a>  </td>  </tr>  <tr>
+					<td> <strong><a href="http://act.yapc.eu/mtmh2012/user/1026">liz</a></strong>  <img src="assets/photo.png" alt="photo" title="photo" height="12" width="12">  </td>
+					<td> Echt </td>
+					<td> Netherlands </td>
+					<td> <a href="http://amsterdam.pm.org/">Amsterdam.pm , Vlaanderen.pm</a>  </td>  </tr>  <tr>
+					<td> <strong><a href="http://act.yapc.eu/mtmh2012/user/1174">Jonathan Worthington (‎jnthn‎)</a></strong>  <img src="assets/photo.png" alt="photo" title="photo" height="12" width="12">  </td>
+					<td> Lund </td>
+					<td> Sweden </td>
+					<td> <a href="http://bratislava.pm.org/">Bratislava.pm</a>  </td>  </tr>  <tr>
+					<td> <strong><a href="http://act.yapc.eu/mtmh2012/user/1256">Florian Ragwitz (‎rafl‎)</a></strong>  <img src="assets/photo.png" alt="photo" title="photo" height="12" width="12">  </td>
+					<td> Chemnitz </td>
+					<td> Germany </td>
+					<td> <a href="http://dresden.pm.org/">Dresden.pm</a>  </td>  </tr>  <tr>
+					<td> <a href="http://act.yapc.eu/mtmh2012/user/1275">Renee Bäcker (‎reneeb‎)</a>  </td>
+					<td> Frankfurt </td>
+					<td> Germany </td>
+					<td> <a href="http://frankfurt.perlmongers.de/">Frankfurt.pm</a>  </td>  </tr>  <tr>
+					<td> <a href="http://act.yapc.eu/mtmh2012/user/1641">Andrew Rodland (‎hobbs‎)</a>  <img src="assets/photo.png" alt="photo" title="photo" height="12" width="12">  </td>
+					<td> &nbsp;  </td>
+					<td> United States </td>
+					<td> <a href="http://ny.pm.org/">NY.pm</a>  </td>  </tr>  <tr>
+					<td> <strong><a href="http://act.yapc.eu/mtmh2012/user/1692">Patrick Michaud (‎Pm‎)</a></strong>  <img src="assets/photo.png" alt="photo" title="photo" height="12" width="12">  </td>
+					<td> Plano, Texas </td>
+					<td> United States </td>
+					<td> DFW.pm  </td>  </tr>  <tr>
+					<td> <strong><a href="http://act.yapc.eu/mtmh2012/user/1719">Nicholas Perez (‎nperez‎)</a></strong>  <img src="assets/photo.png" alt="photo" title="photo" height="12" width="12">  </td>
+					<td> Amsterdam </td>
+					<td> Netherlands </td>
+					<td> Amsterdam.pm  </td>  </tr>  <tr>
+					<td> <strong><a href="http://act.yapc.eu/mtmh2012/user/1797">Stevan Little (‎stevan‎)</a></strong>  <img src="assets/photo.png" alt="photo" title="photo" height="12" width="12">  </td>
+					<td> &nbsp;  </td>
+					<td> United States </td>
+					<td> &nbsp;  </td>  </tr>  <tr>
+					<td> <strong><a href="http://act.yapc.eu/mtmh2012/user/1798">Yuval Kogman (‎nothingmuch‎)</a></strong>  <img src="assets/photo.png" alt="photo" title="photo" height="12" width="12">  </td>
+					<td> Beer Sheva </td>
+					<td> Israel </td>
+					<td> Israel.pm  </td>  </tr>  <tr>
+					<td> <strong><a href="http://act.yapc.eu/mtmh2012/user/1844">Jan Henning Thorsen (‎batman‎)</a></strong>  <img src="assets/photo.png" alt="photo" title="photo" height="12" width="12">  </td>
+					<td> Oslo </td>
+					<td> Norway </td>
+					<td> <a href="http://miltonkeynes.pm.org/">Milton Keynes.pm</a>  </td>  </tr>  <tr>
+					<td> <strong><a href="http://act.yapc.eu/mtmh2012/user/2245">Shawn Moore (‎Sartak‎)</a></strong>  <img src="assets/photo.png" alt="photo" title="photo" height="12" width="12">  </td>
+					<td> Boston </td>
+					<td> United States </td>
+					<td> Tsukuba.pm  </td>  </tr>  <tr>
+					<td> <a href="http://act.yapc.eu/mtmh2012/user/4084">Nicolas Mendoza (‎nicomen‎)</a>  <img src="assets/photo.png" alt="photo" title="photo" height="12" width="12">  </td>
+					<td> Oslo </td>
+					<td> Norway </td>
+					<td> Oslo.pm  </td>  </tr>  <tr>
+					<td> <strong><a href="http://act.yapc.eu/mtmh2012/user/4307">Reini Urban (‎rurban‎)</a></strong>  <img src="assets/photo.png" alt="photo" title="photo" height="12" width="12">  </td>
+					<td> Houston </td>
+					<td> United States </td>
+					<td> <a href="http://houston.pm.org/">Houston.pm, Vienna.pm</a>  </td>  </tr>  </tbody></table>   <br>    <input name="onext" value="20" type="hidden">
+					<input id="nav" name="next" value="&gt;&gt;" type="submit">
+				</form>
+			</div>
+
+		</div>
+
+		<div id="footer">
+			<div id="footer-content">
+			 		Powered by <a href="http://act.mongueurs.net/">Act</a>
+		  	</div>
+		</div>
+
+	 </body>
+
+</html>
