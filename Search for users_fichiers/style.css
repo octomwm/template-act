@@ -1,0 +1,345 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Reset CSS by : http://meyerweb.com/eric/tools/css/reset/ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Style begins*/
+
+/*General*/
+html{
+	width:100%;
+	height: 100%;
+	}
+
+body{
+	height: 100%;
+	font-family: sans-serif;
+	color:#444444;
+	font-size: 16px;
+	line-height: 1.5em;
+	}
+
+p, h1, h2, h3, h4, h5, h6, ul, blockquote {
+	margin-bottom: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6{
+	color: #333333;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+h2 {
+    font-size: 1.325em;
+}
+h3 {
+    font-size: 1.25em;
+}
+h4 {
+    font-size: 1.125em;
+}
+h5, h6 {
+    font-size: 1em;
+}
+
+a{
+	color: #1168CC
+}
+
+b{
+	font-weight: bold;
+}
+
+/* Header Style */
+#logo{
+	margin-top:47px;
+	color:white;
+	font-size: 4em
+}
+
+#user{
+	display:block;
+	margin-top:45px;
+	color:white;
+}
+
+#header a, #menu a, #menu h2, #menu{
+	color:white;
+	text-decoration: none;
+}
+#header{
+	width : 100%;
+	height : 100px;
+	background-color: #d90c00;
+}
+
+#headerbox{
+	width : 690px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#logo{
+	float:left;
+}
+
+#user{
+	float:right;
+}
+#menu{
+	width:100%;
+	height : 30px;
+	padding-bottom: 10px;
+	background-color : #d90c00;
+	transition-duration:0.4s;
+	display : block;
+}
+
+#menu img{
+	width:49px;
+	height: 30px;
+	margin-left: 49%;
+	transition-duration:0.4s;
+}
+#menu:hoverr img{
+	transform:rotate(180deg);
+	transition-duration:0.4s;
+	transition-delay:0.4s;
+}
+
+#menu:hoverr{
+	width:100%;
+	height: 275px;
+	transition-duration:0.4s;
+	transition-delay:0.4s;
+}
+#menu #dropdown{
+	display : none;
+	min-width:690px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#menu:hoverr #dropdown{
+	display : table;
+	padding-top: 10px;
+}
+
+#menu #dropdown div {
+	display:block;
+	float:left;
+	padding-right: 3em;
+	padding-bottom: 3em;
+}
+
+#menu #dropdown div:last-child {
+	padding-right: 0em;
+}
+
+/*Content*/
+
+#wrapper {
+	width:100%;
+	margin-top: 1em;
+}
+#content{
+	width:690px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/*Search form*/
+
+fieldset#searchform{
+	height: 200px;
+	display:block;
+}
+
+#searchform table{
+	float:left;
+	width : 490px;
+	background-color: #eeeeee;
+	display : block;
+	padding: 30px;
+}
+#searchform table input{
+	border:1px solid #cccccc;
+}
+
+#searchform table select{
+	width:275px;
+}
+
+#searchform table td {
+	padding-bottom: 5px;
+	padding-right: 10px;
+	}
+
+input#searchbutton{
+	float:right;
+	width:200px;
+	background-color: #bbbbbb;
+	border: none;
+	height:182px;
+	font-size: 1.5em;
+	color:white;
+}
+
+input#searchbutton:hoverr{
+	background-color: #777777;
+	transition-duration:0.4s;
+}
+
+p#info{
+	background-color: #fafae0;
+	border:1px solid #f6f6b8;
+	box-shadow: 0px 2px 0 #ffffff,0px 3px 0 #f6f6b8;
+	padding: 10px;
+	color:#837d47;
+}
+
+
+/*Search results*/
+
+table#user-list tr {
+	border: 1px solid #cccccc
+}
+
+table#user-list th {
+	text-align: left;
+	padding-left:10px;
+}
+
+table#user-list td {
+	padding:0 10px;
+	border-right:1px solid #cccccc;
+}
+table#user-list tr:first-child {
+	border: 1px solid #cccccc;
+	background-image:linear-gradient(#ffffff,#eeeeee);
+
+}
+
+input#nav {
+	width:100%;
+	padding:10px 10px;
+	border:none;
+	background-color: #bbbbbb;
+	color:white;
+	font-size: 1.5em;
+}
+input#nav:hoverr {
+	transition-duration:0.4s;
+	background-color: #555555;
+}
+
+table#user-list tbody tr td img {
+	float:right;
+}
+
+
+/*Footer*/
+
+#footer{
+	width:100%;
+	background-color: #348017;
+	color:white;
+	margin-top:1em;
+}
+#footer-content{
+	width:690px;
+	color:white;
+	padding: 20px;
+	margin:auto;
+}
+#footer-content a{
+	color:white;
+	text-decoration: underline;
+}
+
+@media screen and (max-width:768px){
+
+
+
+#menu {
+	height: 100%;
+	width:150px;
+}
+
+#menu #dropdown, #menu #dropdown:hoverr{
+	display : block;
+	padding-top: 0px;
+	width:150px;
+	min-width: 150px;
+	height: 100%;
+	background-color: #d90c00;
+}
+
+#menu img{
+	display:none;
+}
+#menu #dropdown div{
+	float:none;
+}
+
+#content {
+	max-width:618px;
+}
+
+
+}
+
+@media screen and (max-width:690px){
+
+}
+
+@media screen and (max-width:480px){
+
+}
