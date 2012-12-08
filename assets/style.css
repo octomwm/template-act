@@ -200,6 +200,7 @@ b{
 fieldset#searchform{
 	height: 200px;
 	display:block;
+	margin-bottom: 1em;
 }
 
 #searchform table{
@@ -208,9 +209,11 @@ fieldset#searchform{
 	background-color: #eeeeee;
 	display : block;
 	padding: 30px;
+	height:100%;
 }
 #searchform table input{
 	border:1px solid #cccccc;
+	width:275px;
 }
 
 #searchform table select{
@@ -227,12 +230,12 @@ input#searchbutton{
 	width:200px;
 	background-color: #bbbbbb;
 	border: none;
-	height:182px;
+	height:100%;
 	font-size: 1.5em;
 	color:white;
 }
 
-input#searchbutton:hover{
+input#searchbutton:hover, input#nav:hover{
 	background-color: #777777;
 	transition-duration:0.4s;
 }
@@ -274,10 +277,6 @@ input#nav {
 	background-color: #bbbbbb;
 	color:white;
 	font-size: 1.5em;
-}
-input#nav:hover {
-	transition-duration:0.4s;
-	background-color: #555555;
 }
 
 table#user-list tbody tr td img {
