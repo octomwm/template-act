@@ -127,8 +127,9 @@ body{
 	display:table;
 	background-color: #006680;
 	height:100%;
-	border-radius: 3px;
+	border-radius: 3px 3px 0 0;
 	box-shadow: 1px 1px 4px #777;
+        overflow: hidden;
 }
 
 #userbar{
@@ -176,6 +177,8 @@ body{
 	display:table;
 	height : calc(100% - 133px);
 	border-right: 1px solid #C8C8C8;
+        padding-bottom: 500em;
+        margin-bottom: -500em;
 }
 #main{
 	float :right;
@@ -184,11 +187,17 @@ body{
 	padding:30px 20px;
 	display:table;
 	height : calc(100% - 133px);
+        padding-bottom: 500em;
+        margin-bottom: -500em;
 }
 
 #footer {
 	display: table;
 	width: 960px;
+        margin: 0 auto;
+	border-radius: 0 0 3px 3px;
+	box-shadow: 1px 1px 4px #777;
+	background-color: #006680;
 }
 
 /* Specifique Style */
