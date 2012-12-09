@@ -137,6 +137,7 @@ body{
 	height:40px;
 	display:block;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
+	background: -webkit-gradient(linear, center bottom, center top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.2)));
 	padding: 9px 0 0;
 	border-radius: 3px 3px 0 0;
 	font-weight: bold;
@@ -174,7 +175,6 @@ body{
 	float:left;
 	padding:30px 19px 30px 15px;
 	background-color: rgba(255, 255, 255, 0.90);
-	display:table;
 	height : calc(100% - 133px);
 	border-right: 1px solid #C8C8C8;
         padding-bottom: 500em;
@@ -184,20 +184,23 @@ body{
 	float :right;
 	background-color: rgba(255, 255, 255, 0.95);
 	width:730px;
-	padding:30px 20px;
-	display:table;
 	height : calc(100% - 133px);
+	padding:30px 20px;
         padding-bottom: 500em;
         margin-bottom: -500em;
 }
 
 #footer {
-	display: table;
 	width: 960px;
         margin: 0 auto;
 	border-radius: 0 0 3px 3px;
 	box-shadow: 1px 1px 4px #777;
 	background-color: #006680;
+        margin-bottom: 20px;
+}
+
+#footer div {
+        padding: 5px;
 }
 
 /* Specifique Style */
@@ -252,4 +255,102 @@ input#searchbutton:active{
 #user-name, #user-town, #user-country, #user-group{
 	width:300px;
 	float:right;
+}
+
+
+@media all and (max-width: 800px) and (min-width: 768px) {
+        #content{
+                width: 95%; 
+        }
+        #menu {
+                width: 18%; 
+                position: relative;
+        }
+        #searchform {
+                margin-left: 0; 
+                padding: 20px;
+        }
+        #main {
+                width: 71.5%; 
+                font: inherit;
+                position: relative;
+                z-index: 100;
+        }
+        #footer {
+                width: 95%; 
+        }
+}
+
+@media all and (max-width: 960px) and (min-width: 800px) {
+        #content{
+                width: 95%; 
+        }
+        #menu {
+                width: 18%; 
+                position: relative;
+        }
+        #searchform {
+                margin-left: 0; 
+                padding: 20px;
+        }
+        #main {
+                width: 71.9%; 
+                font: inherit;
+                position: relative;
+                z-index: 100;
+        }
+        #footer {
+                width: 95%; 
+        }
+}
+
+@media all and (max-width: 640px) and (min-width: 320px) {
+        #content{
+                width: 95%; 
+        }
+        #menu {
+                width: 100%; 
+                position: relative;
+                float: left;
+        }
+        #searchform {
+                margin-left: 0; 
+                width: 95%;
+                max-width: 400px;
+        }
+        
+        #searchform div {
+                width: 90%; 
+                margin-left: 10px;
+        }
+
+        #user-name, #user-town, #user-country, #user-group {
+                width: 100%;
+                float: right;
+        }
+
+        #searchbutton {
+                width: 100%; 
+                max-width: 200px;
+                margin: 0 auto;
+        }
+        #main {
+                clear: left;
+                width: 100%;
+                font: inherit;
+                position: relative;
+                z-index: 100;
+                padding: 0px 0px;
+                padding-bottom: 500em;
+                margin-bottom: -500em;
+        }
+        #main > * {
+                padding-left: 5px; 
+                padding-right: 5px; 
+                margin-left: 5px;
+        }
+        #footer {
+                width: 95%; 
+        }
+
 }
